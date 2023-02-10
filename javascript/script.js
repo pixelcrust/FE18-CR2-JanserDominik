@@ -32,7 +32,6 @@ const json_string = `[{
 //parse it into object
 let obj_tasks = JSON.parse(json_string);
 
-
 //create html cards
 for(let j = 0; j < obj_tasks.length; j++){
     document.getElementById("main").innerHTML += `
@@ -61,9 +60,10 @@ let list_buttons = document.getElementsByClassName("priority_button");
 //add function for button
 //function add_priority()
 //sort function
-//function sort_priority(){
+function sort_priority(){
     //obj_tasks
-//}
+}
+
 //add eventlistener
 //priority color function
 function change_priority_color(i){
@@ -89,6 +89,5 @@ for(let i = 0; i < list_buttons.length; i++){
     console.log(obj_tasks[i].importance);
 }
 
-//sort button
-
 //sort event listener
+document.getElementById("button_sort").addEventListener("click",sort_priority());
