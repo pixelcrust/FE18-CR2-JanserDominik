@@ -1,0 +1,28 @@
+[{ 
+    "taskName": "Restday", 
+    "image": "images/restday.jpg", 
+    "description": "Regenerate your strength.", 
+    "importance": 0    
+
+},
+{ 
+    "taskName": "Yoga", 
+    "image": "images/yoga.jpg", 
+    "description": "Do yoga and stretch, for staying healthier.", 
+    "importance": 0    
+
+},
+{ 
+    "taskName": "Climbing", 
+    "image": "images/climbing.jpg", 
+    "description": "Go climbing and train the technique", 
+    "importance": 0    
+
+}, 
+{ 
+    "taskName": "Weight training", 
+    "image": "images/weighttraining.jpg", 
+    "description": "Build more strength.", 
+    "importance": 0    
+
+}]
