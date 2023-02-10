@@ -37,19 +37,21 @@ let obj_tasks = JSON.parse(json_string);
 for(let j = 0; j < obj_tasks.length; j++){
     document.getElementById("main").innerHTML += `
     <div>
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="${obj_tasks[j].image}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">${obj_tasks[j].taskName}</h5>
-      <p class="card-text">${obj_tasks[j].description}</p>
-      <p> Priority level: </p>
-      <div class="priority_container">
-        <p class="priority"> ${obj_tasks[j].importance}</p>
-      </div>
-      <button class="priority_button">+1</button>
-    </div>
-    </div>
-  </div>`;
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${obj_tasks[j].image}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">${obj_tasks[j].taskName}</h5>
+                <p class="card-text">${obj_tasks[j].description}</p>
+                <div class="row row-cols-2">
+                    <span> Priority level: </span>
+                    <div class="priority_container">
+                        <p class="priority"> ${obj_tasks[j].importance}</p>
+                    </div>
+                </div>  
+                <button class="priority_button">+1</button>
+            </div>
+        </div>
+    </div>`;
   change_priority_color(j);
 }
 
@@ -66,13 +68,13 @@ let list_buttons = document.getElementsByClassName("priority_button");
 //priority color function
 function change_priority_color(i){
     if(obj_tasks[i].importance < 2){
-        document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-success"> ${obj_tasks[i].importance}</p>`;
+        document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-success rounded-1"> ${obj_tasks[i].importance}</p>`;
     }
     else if(obj_tasks[i].importance < 4){
-        document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-warning"> ${obj_tasks[i].importance}</p>`;
+        document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-warning rounded-1"> ${obj_tasks[i].importance}</p>`;
     }
     else{
-        document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-danger"> ${obj_tasks[i].importance}</p>`;
+        document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-danger rounded-1"> ${obj_tasks[i].importance}</p>`;
     }
 }
 
