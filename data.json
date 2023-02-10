@@ -1,4 +1,4 @@
-[{ 
+data = `[{ 
     "taskName": "Restday", 
     "image": "images/restday.jpg", 
     "description": "Regenerate your strength.", 
@@ -53,4 +53,4 @@
     "description": "Build more strength.", 
     "importance": 0    
 
-}]
+}]`

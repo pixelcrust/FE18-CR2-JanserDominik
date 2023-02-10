@@ -1,63 +1,6 @@
-//get data from json
-const json_string = `[{ 
-    "taskName": "Restday", 
-    "image": "images/restday.jpg", 
-    "description": "Regenerate your strength.", 
-    "importance": 0    
-
-},
-{ 
-    "taskName": "Yoga", 
-    "image": "images/yoga.jpg", 
-    "description": "Do yoga and stretch, for staying healthier.", 
-    "importance": 0    
-
-},
-{ 
-    "taskName": "Climbing", 
-    "image": "images/climbing.jpg", 
-    "description": "Go climbing and train the technique", 
-    "importance": 0    
-
-}, 
-{ 
-    "taskName": "Weight training", 
-    "image": "images/weighttraining.jpg", 
-    "description": "Build more strength.", 
-    "importance": 0    
-
-},
-{ 
-    "taskName": "Restday", 
-    "image": "images/restday.jpg", 
-    "description": "Regenerate your strength.", 
-    "importance": 0    
-
-},
-{ 
-    "taskName": "Yoga", 
-    "image": "images/yoga.jpg", 
-    "description": "Do yoga and stretch, for staying healthier.", 
-    "importance": 0    
-
-},
-{ 
-    "taskName": "Climbing", 
-    "image": "images/climbing.jpg", 
-    "description": "Go climbing and train the technique", 
-    "importance": 0    
-
-}, 
-{ 
-    "taskName": "Weight training", 
-    "image": "images/weighttraining.jpg", 
-    "description": "Build more strength.", 
-    "importance": 0    
-
-}]`;
 
 //parse it into object
-let obj_tasks = JSON.parse(json_string);
+let obj_tasks = JSON.parse(data);
 
 //function to create html cards
 function create_the_cards(){
@@ -102,7 +45,7 @@ function sort_priority(){
 
 //priority color function
 function change_priority_color(i){
-    if(obj_tasks[i].importance < 2){
+    if(obj_tasks[i].importance < 2){ //see how the priority is and create a <p> with the backgroundcolour acordingly
         document.getElementsByClassName("priority_container")[i].innerHTML = `<p class="priority bg-success rounded-1 p-1"> ${obj_tasks[i].importance}</p>`;
     }
     else if(obj_tasks[i].importance < 4){
