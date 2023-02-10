@@ -1,5 +1,4 @@
 //get data from json
-
 const json_string = `[{ 
     "taskName": "Restday", 
     "image": "images/restday.jpg", 
